@@ -1,0 +1,19 @@
+ALGORITHM insert_element_into_sorted_sequence_in_the_array
+var
+
+list:array_of_integer:=[5]
+i,j,insert:integer
+
+BIGIN
+ FOR i FROM 0 TO list.length-1 step 1 DO
+         insert := list[i]
+         j := i - 1
+        WHILE (j >= 0 && arr[j] > insert) 
+            list[j + 1] = list[j]
+            j--
+        END WHILE
+        arr[j+1]:=insert
+ END FOR
+
+show(`${list}`)
+END
